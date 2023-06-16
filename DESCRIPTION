@@ -1,0 +1,16 @@
+Package: rsisVIVE
+Title: Robustified Some Invalid Some Valid Instrumental Variable Estimator.
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jana", "Osea", , "jana.osea@stat.ubc.com", role = c("aut", "cre"))
+Description: Performs robust instrumental variable estimation to accurately estimate the causal effect between exposure and outcome while tolerating presence of potentially invalid instruments which closely follows Kang et. al.'s sisVIVE (2016).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    MASS (>= 7.3.58.1),
+    robustbase (>= 0.95.0),
+    robustHD (>= 0.7.4),
+    dplyr (>= 1.0.10),
+    perry (>= 0.3.1)
