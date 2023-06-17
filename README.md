@@ -3,8 +3,7 @@
 
 # rsisVIVE
 
-<!-- badges: start -->
-<!-- badges: end -->
+![](man/figures/logo.png)
 
 The goal of rsisVIVE (robustified some invalid some valid instrumental
 variable estimator) is to estimate the causal relationship between an
@@ -56,11 +55,11 @@ Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
 Y[sample(1:n, m)] <- rnorm(m, 70, 1) # contamination
 rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
 #> $alpha
-#>         x1         x2         x3         x4         x5         x6         x7 
-#>  0.0000000 -0.3138036  0.0000000 -0.3033775 -0.3144243  0.0000000  0.5195043 
-#>         x8         x9        x10 
-#>  0.7707321  0.0000000  0.0000000 
+#>        x1        x2        x3        x4        x5        x6        x7        x8 
+#>  0.000000  0.000000  0.000000 -1.066817 -1.899654  0.971313  0.000000 -1.421266 
+#>        x9       x10 
+#>  0.000000  0.000000 
 #> 
 #> $beta
-#> [1] -0.3087998
+#> [1] 0.1545601
 ```

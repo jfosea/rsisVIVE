@@ -15,8 +15,7 @@ knitr::opts_chunk$set(
 
 # rsisVIVE
 
-<!-- badges: start -->
-<!-- badges: end -->
+![](man/figures/logo.png)
 
 The goal of rsisVIVE (robustified some invalid some valid instrumental variable estimator) is to estimate the causal relationship between an outcome and an exposure in the presence of invalid instruments while tolerating proportions of contamination in the exposure and/or outcome values. The algorithm follows closely with the sisVIVE method of Kang et. al. (2016). The rsisVIVE replaces the two step algorithm of the sisVIVE with robust counterparts. More details of the method can be seen in the the master's thesis submission by Jana Osea to the University of British Columbia .
 
