@@ -11,9 +11,13 @@ outcome and an exposure in the presence of invalid instruments while
 tolerating large proportions of contamination in the exposure and/or
 outcome values. The algorithm follows closely with the sisVIVE method of
 Kang et. al. (2016). The rsisVIVE replaces the two step algorithm of the
-sisVIVE with robust counterparts. More details of the method can be seen
-in the the master’s thesis submission by Jana Osea to the University of
-British Columbia .
+sisVIVE with robust counterparts.
+
+More details of the method can be seen in the master’s thesis submission
+by Jana Osea at the University of British Columbia as a partial
+fulfillment of the requirements for Master’s of Science, Department of
+Statistics under the supervision of [Dr. Gabriela
+Cohen-Freue](https://gcohenfr.github.io/).
 
 ## Installation
 
@@ -56,12 +60,12 @@ Y[sample(1:n, m)] <- rnorm(m, 70, 1) # contamination
 rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
 #> $alpha
 #>         x1         x2         x3         x4         x5         x6         x7 
-#>  0.9391262 -3.4757557  0.0000000  0.0000000  0.0000000  0.7868224 -0.4619144 
+#>  0.4181583  0.0000000  0.0000000  0.0000000  0.6404902  0.0000000  0.0000000 
 #>         x8         x9        x10 
-#>  0.0000000  0.7757144  0.0000000 
+#> -0.7242827  0.2477736 -2.6752423 
 #> 
 #> $beta
-#> [1] 1.889849
+#> [1] 2.948506
 ```
 
 ## References
