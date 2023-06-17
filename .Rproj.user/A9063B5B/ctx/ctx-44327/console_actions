@@ -1,0 +1,32 @@
+{
+    "type": [
+        2,
+        0,
+        1,
+        3,
+        0,
+        1,
+        2,
+        0,
+        1,
+        2,
+        3,
+        3,
+        2
+    ],
+    "data": [
+        "\nR version 4.2.2 (2022-10-31 ucrt) -- \"Innocent and Trusting\"\nCopyright (C) 2022 The R Foundation for Statistical Computing\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\n\nR is free software and comes with ABSOLUTELY NO WARRANTY.\nYou are welcome to redistribute it under certain conditions.\nType 'license()' or 'licence()' for distribution details.\n\nR is a collaborative project with many contributors.\nType 'contributors()' for more information and\n'citation()' on how to cite R or R packages in publications.\n\nType 'demo()' for some demos, 'help()' for on-line help, or\n'help.start()' for an HTML browser interface to help.\nType 'q()' to quit R.\n\n",
+        "> ",
+        "library(devtools)",
+        "Loading required package: usethis\n",
+        "> ",
+        "use_git()",
+        "\u001B[32m✔\u001B[39m Setting active project to \u001B[34m'C:/Users/surfacepro/Documents/rsisVIVE'\u001B[39m\n",
+        "> ",
+        "load_all()",
+        "\u001B[38;5;232m\u001B[36mℹ\u001B[38;5;232m Loading \u001B[34mrsisVIVE\u001B[38;5;232m\u001B[39m\n",
+        "Warning message:\n",
+        "replacing previous import ‘MASS::select’ by ‘dplyr::select’ when loading ‘rsisVIVE’ \n",
+        "\nRestarting R session...\n\n"
+    ]
+}

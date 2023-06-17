@@ -1,0 +1,128 @@
+library(rsisVIVE)
+L <- 10
+n <- 50
+n <- 50
+L <- 10
+s <- 3
+Sigma <- diag(1, nrow = L)
+a0 <- 1
+a1 <- rep(0.05, L)
+b0 <- 1
+b1 <- c(rep(1,s), rep(0, L-s)) # alpha
+b2 <- 1                        # beta
+error <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.9, 0.9, 1), 2, 2))
+Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
+D <- a0 + Z %*% a1 + error[, 1]
+Y <- b0 + Z %*% a1 + D * b2 + error[, 2]
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+library(rsisVIVE)
+n <- 50
+L <- 10
+s <- 3
+contam <- 0.2
+Sigma <- diag(1, nrow = L)
+a0 <- 1
+b0 <- 1
+b1 <- c(rep(1,s), rep(0, L-s)) # alpha
+error <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.9, 0.9, 1), 2, 2))
+Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
+D <- a0 + Z %*% a1 + error[, 1]
+Y <- b0 + Z %*% a1 + D * b2 + error[, 2]
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
+Z
+D
+Y
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+library(rsisVIVE)
+n <- 50
+L <- 10
+s <- 3
+contam <- 0.2
+Sigma <- diag(1, nrow = L)
+a0 <- 1
+b0 <- 1
+b2 <- 1                        # beta
+Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
+D <- a0 + Z %*% a1 + error[, 1]
+Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+library(rsisVIVE)
+n <- 50
+s <- 3
+contam <- 0.2
+a0 <- 1
+a1 <- rep(0.05, L)
+b0 <- 1
+b2 <- 1                        # beta
+error <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.9, 0.9, 1), 2, 2))
+Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
+D <- a0 + Z %*% a1 + error[, 1]
+Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+library(rsisVIVE)
+n <- 50
+L <- 10
+s <- 3
+Sigma <- diag(1, nrow = L)
+a0 <- 1
+a1 <- rep(0.05, L)
+b1 <- c(rep(1,s), rep(0, L-s)) # alpha
+b2 <- 1                        # beta
+error <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.9, 0.9, 1), 2, 2))
+Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
+D <- a0 + Z %*% a1 + error[, 1]
+Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+library(rsisVIVE)
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+document()
+library(devtools)
+document()
+document()
+library(rsisVIVE)
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+load_all()
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+load_all()
+library(rsisVIVE)
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+load_all()
+document()
+use_package("perry")
+load_all()
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+Y[ind] <- rnorm(floor(0.2*n), 70, 1) # contamination
+n <- 50
+L <- 10
+m <- floor(0.2*n)
+Sigma <- diag(1, nrow = L)
+a0 <- 1
+a1 <- rep(0.05, L)
+b0 <- 1
+b1 <- c(rep(1,s), rep(0, L-s)) # alpha
+b2 <- 1                        # beta
+error <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.9, 0.9, 1), 2, 2))
+Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
+D <- a0 + Z %*% a1 + error[, 1]
+Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
+Y[sample(1:n, m)] <- rnorm(m, 70, 1) # contamination
+rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
+package_version("1.0.0")
+packageVersion("dplyr")
+packageVersion("MASS")
+packageVersion("robustbase")
+packageVersion("robustHD")
+packageVersion("perry")
+package_version("0.0.1")
+package_version("0.0.0.1")
+use_release_issue()
+use_git()
+use_git()
+use_git()
+use_git()
+use_git()
+use_release_issue()
+library(devtools)
+use_git()
+load_all()

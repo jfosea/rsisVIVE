@@ -1,0 +1,14 @@
+{
+    "type": [
+        0,
+        1,
+        3,
+        2
+    ],
+    "data": [
+        "> ",
+        "rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)",
+        "Error in foldControl(K = 10, R = 1, type = \"random\") : \n  could not find function \"foldControl\"\n",
+        "\nRestarting R session...\n\n"
+    ]
+}
