@@ -64,6 +64,11 @@ Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
 Y[sample(1:n, m)] <- rnorm(m, 70, 1) # add contamination
 rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
 ```
+We compare with the results of `sisVIVE`. 
+```{r}
+# compare with sisVIVE
+sisVIVE::cv.sisVIVE(Y, D, Z)
+```
 
 ## References
 

@@ -68,6 +68,27 @@ rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
 #> [1] 1.920595
 ```
 
+We compare with the results of `sisVIVE`.
+
+``` r
+# compare with sisVIVE
+sisVIVE::cv.sisVIVE(Y, D, Z)
+#> $lambda
+#> [1] 160.7302
+#> 
+#> $estCVError
+#> [1] 7155.194
+#> 
+#> $alpha
+#>  [1] 0 0 0 0 0 0 0 0 0 0
+#> 
+#> $beta
+#> [1] 8.768325
+#> 
+#> $whichInvalid
+#> [1] ""
+```
+
 ## References
 
 Kang, H., Zhang, A., Cai, T. T., and Small, D. S. (2016). [Instrumental
