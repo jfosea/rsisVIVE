@@ -37,7 +37,7 @@ library(rsisVIVE)
 #> Warning: replacing previous import 'MASS::select' by 'dplyr::select' when
 #> loading 'rsisVIVE'
 
-n <- 50
+n <- 100
 L <- 10
 s <- 3
 m <- floor(0.2*n)
@@ -48,7 +48,7 @@ a1 <- rep(0.05, L)
 
 b0 <- 1
 b1 <- c(rep(1,s), rep(0, L-s)) # alpha
-b2 <- 1                        # beta
+b2 <- 1                        # beta (parameter of interest)
 
 error <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.9, 0.9, 1), 2, 2))
 
@@ -56,16 +56,16 @@ Z <- MASS::mvrnorm(n, mu = rep(0, L), Sigma)
 D <- a0 + Z %*% a1 + error[, 1]
 Y <- b0 + Z %*% b1 + D * b2 + error[, 2]
 
-Y[sample(1:n, m)] <- rnorm(m, 70, 1) # contamination
+Y[sample(1:n, m)] <- rnorm(m, 70, 1) # add contamination
 rsisVIVE(Y, D, Z, method = 'PE_SE', ncores = 1)
 #> $alpha
-#>         x1         x2         x3         x4         x5         x6         x7 
-#>  0.4181583  0.0000000  0.0000000  0.0000000  0.6404902  0.0000000  0.0000000 
-#>         x8         x9        x10 
-#> -0.7242827  0.2477736 -2.6752423 
+#>          x1          x2          x3          x4          x5          x6 
+#>  0.00000000  0.00000000 -0.09379886  0.00000000  0.00000000 -0.25057890 
+#>          x7          x8          x9         x10 
+#> -1.94291405  0.32676347  0.00000000  1.31882800 
 #> 
 #> $beta
-#> [1] 2.948506
+#> [1] 1.920595
 ```
 
 ## References
